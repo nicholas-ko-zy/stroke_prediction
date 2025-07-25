@@ -27,7 +27,7 @@ The dataset is taken from Kaggle. It contains the following variables.
 #### Model 1: Simple logistic regression.
 The logistic model that was trained on unbalanced data had a very high accuracy of 96%. However this is because accuracy measures the number of total correct predictions. Since the data had more non-stroke patients, it could accurately predict non-strokes, but that is not our goal. The high accuracy of model 1 only shows that the model is good at predicting non-stroke cases. Instead, we are far more interested in the number of stroke patients the model can predict.
 
-{% highlight python %}
+```python
 from sklearn.metrics import confusion_matrix
 
 cnf_matrix = confusion_matrix(y_train, lr_model.predict(x_train))
@@ -79,7 +79,7 @@ plt.figure()
 plt.grid(False)
 plot_confusion_matrix(cnf_matrix, classes=class_names, normalize=True,
                       title='Normalized confusion matrix')
-{% endhighlight %}  
+```
 
 Even though Model 1 showed a high accuracy of 0.96 when predicting the `y_train` data, the model faired very poorly on predicting true positives.
 
@@ -91,14 +91,14 @@ Model 2 was trained on the SMOTE transformed data which reduced accuracy to 95% 
 
 Model 2 uses the same logistic regression model as Model 1, except the data used has been transformed using SMOTE. Here is the code I used for oversampling data on stroke patients.
 
-{% highlight python %}
+```python
 sm = SMOTE(random_state=42)
 
 X_sm, Y_sm = sm.fit_resample(X, Y)
 
 print(f'''Shape of X before SMOTE: {X.shape}
 Shape of X after SMOTE: {X_sm.shape}''')
-{% endhighlight %} 
+```
 
 ![SMOTE_bar](/img/stroke/smote_bar.png)
 
