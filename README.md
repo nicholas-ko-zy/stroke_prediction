@@ -1,6 +1,6 @@
 # Stroke Prediction Project
 
-_This was a simple exploratory data science project I worked in university. I tested 4 different models to see which model best predicts an instance of stroke in a patient based on several factors such as BMI and age. I used [SMOTE (Synthetic Minority Over-sampling Technique)](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html) to change the unbalanced data to balanced data set by oversampling the minority class (stroke patient) data._ 
+_This was a simple exploratory data science project I did in university. I tested 4 different models to see which model best predicts an instance of stroke in a patient based on several factors such as BMI and age. I used [SMOTE (Synthetic Minority Over-sampling Technique)](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html) to change the unbalanced data to balanced data set by oversampling the minority class (stroke patient) data._ 
 
 ![SMOTE](/img/stroke/smote.png)
 
